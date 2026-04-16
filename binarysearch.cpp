@@ -21,5 +21,51 @@ void input()
             cout << "\n[!] jumlah elemen tidak boleh lebih dari 10. silahkan coba lagi.\n";
         }
     }
+    cout << "\n=========================\n";
+    cout << "   masukkan elemen array   \n";
+    cout << "===========================\n";
+
+    for (int i = 0; i < nPanjang; i++)
+    {
+        cout << "data ke-" << (i + 1) << " = ";
+        cin >> element[i];
+    }
+}
+
+void bubbleSortArray()
+{
+    int pass = 1;
+    do
+    {
+     for (int j = 0; j <= nPanjang - 1 - pass; j++)
+     {
+        if (element[j] > element[j + 1])
+        {
+            int temp = element[j];
+            element[j] = element[j + 1];
+            element[j + 1] = temp;
+        }
+     }
+     pass++;
+    } while (pass <= nPanjang - 1);
+}
+
+void display()
+{
+    cout << "\n=====================================\n";
+    cout << "  elemen array setelah diurutkan (asc) \n";
+    cout << "=======================================\n";
+
+    for (int j = 0; j < nPanjang; j++)
+    {
+        cout << element[j];
+        if (j < nPanjang - 1);
+        {
+            cout << " -> ";
+        }
+    }
+    cout << endl;
+}
+
 
   
